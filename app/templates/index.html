@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+    <!-- Página Principal -->
+    <header>
+        <h1>Mi Portfolio</h1>
+    </header>
+
+    <nav>
+        <a href="registro.html">Ir al Registro</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projects">Proyectos</a>
+    </nav>
+
+    <div class="content" id="about">
+        <h2>Sobre mí</h2>
+        <p>Hola, soy Ismael. Soy un desarrollador web disponible para trabajar.</p>
+    </div>
+
+    <div class="content" id="skills">
+        <h2>Habilidades</h2>
+        <!-- Mostrar el contenido del README.md convertido a HTML -->
+        <div class="markdown-content">
+            {{ readme_html|safe }}
+        </div>
+    </div>
+
+    <div class="content" id="projects">
+        <h2>Proyectos</h2>
+        <p>A continuación, te muestro algunos de los proyectos que he desarrollado:</p>
+        <ul>
+            <li><strong>Proyecto 1:</strong> Aplicación web de gestión de tareas con React.</li>
+            <li><strong>Proyecto 2:</strong> Sistema de gestión de usuarios con Node.js y MongoDB.</li>
+            <li><strong>Proyecto 3:</strong> Página web de portafolio personal con HTML, CSS y JavaScript.</li>
+        </ul>
+    </div>
+
+    <footer>
+        <button class="edit-button" onclick="window.location.href='registro.html'">
+            <img src="{{ url_for('static', filename='img/editar-imagen.png') }}" alt="Editar imagen">Editar
+        </button>
+    </footer>
+
+</body>
+</html>
