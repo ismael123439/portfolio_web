@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Registro</title>
+    <title>Registro de Usuario</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
@@ -15,20 +15,24 @@
     </header>
 
     <div class="form-container">
-        <form action="#">
-            <div class="input-group">
-                <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+        <form action="/register" method="POST">
             <div class="input-group">
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
             </div>
             <div class="input-group">
                 <button type="submit">Registrarse</button>
             </div>
         </form>
     </div>
+
+    <footer>
+        <p>&copy; 2024 TuNombre. Todos los derechos reservados.</p>
+    </footer>
 
 </body>
 </html>
